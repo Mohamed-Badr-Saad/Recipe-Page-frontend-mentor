@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "young-serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+body {
+  width: 100%;
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: hsl(30, 10%, 34%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+header {
+  width: 100%;
+}
+header img {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  line-height: 180%;
+  font-family: "outfit", sans-serif;
+}
+main .image {
+  width: 100%;
+}
+main .image img {
+  width: 100%;
+}
+main .content {
+  margin: 22px;
+}
+main h1 {
+  line-height: 100%;
+  color: rgb(82, 76, 71);
+  font-weight: 400;
+  font-family: "young-serif";
+}
+
+.preparation-time {
+  background-color: hsl(330, 100%, 98%);
+  width: auto;
+  border-radius: 10px;
+  padding: 10px 25px 10px 25px;
+}
+.preparation-time h3 {
+  color: hsl(332, 51%, 32%);
+}
+.preparation-time li {
+  font-size: 0.8em;
+  padding-left: 10px;
+  font-weight: 400;
+}
+.preparation-time li span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.preparation-time li strong {
+  font-size: 16px;
+}
+
+h2 {
+  font-weight: 400;
+  font-family: "young-serif";
+  color: hsl(14, 45%, 36%);
+}
+
+.ingredients li {
+  font-size: 0.8em;
+  padding-left: 10px;
+  font-weight: 400;
+}
+.ingredients li span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.ingredients li strong {
+  font-size: 16px;
+}
+
+.instructions li {
+  font-size: 0.8em;
+  padding-left: 10px;
+  font-weight: 600;
+}
+.instructions li span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.instructions li strong {
+  font-size: 16px;
+}
+
+.line {
+  width: 100%;
+}
+
+.nutrition {
+  width: 100%;
+}
+.nutrition table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.nutrition table .last-line {
+  border-bottom: 0px;
+}
+.nutrition tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition tr .value {
+  color: hsl(14, 45%, 36%);
+}
+.nutrition th {
+  padding: 10px;
+  padding-left: 30px;
+  text-align: left;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=mobile_styles.css.map */

@@ -1,0 +1,157 @@
+@use "sass:map";
+
+$palette: (
+    white: hsl(0, 0%, 100%),
+    stone100: hsl(30, 54%, 90%),
+    stone150: hsl(30, 18%, 87%),
+    stone600: hsl(30, 10%, 34%),
+    stone900: rgba(82, 76, 71, 255),
+    brown800: hsl(14, 45%, 36%),
+    rose800: hsl(332, 51%, 32%),
+    rose50: hsl(330, 100%, 98%)
+);
+$font-weights: (
+    small: 400,
+    medium: 600,
+    large: 700
+);
+
+@mixin li-styles($li-color, $li-font-size, $li-font-weight, $span-color, $strong-color) {
+    li {
+        font-size: $li-font-size;
+        padding-left: 10px;
+        font-weight: $li-font-weight;
+        color: map.get($palette, $li-color);
+        span {
+            font-size: 16px;
+            font-weight: map.get($font-weights, small);
+            color: map.get($palette, $span-color);
+        }
+        strong {
+            font-size: 16px;
+            color: map.get($palette, $strong-color);
+        }
+    }
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "young-serif";
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+body {
+    width: 100%;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: map.get($palette, stone600);
+    background-color: map.get($palette, white);
+}
+
+header {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    line-height: 180%;
+    font-family: "outfit", sans-serif;
+    .image {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        margin: 22px;
+    }
+    h1 {
+        line-height: 100%;
+        color: map.get($palette, stone900);
+        font-weight: map.get($font-weights, small);
+        font-family: "young-serif";
+    }
+}
+
+.preparation-time {
+    background-color: map.get($palette, rose50);
+    width: auto;
+    border-radius: 10px;
+    padding: 10px 25px 10px 25px;
+    h3 {
+        color: map.get($palette, rose800);
+    }
+
+    @include li-styles(
+        map.get($palette, rose800),
+        0.8em,
+        map.get($font-weights, small),
+        map.get($palette, stone600),
+        map.get($palette, stone900)
+    );
+}
+
+h2 {
+    font-weight: map.get($font-weights, small);
+    font-family: "young-serif";
+    color: map.get($palette, brown800);
+}
+
+.ingredients {
+    @include li-styles(
+        map.get($palette, brown800),
+        0.8em,
+        map.get($font-weights, small),
+        map.get($palette, stone600),
+        map.get($palette, stone900)
+    );
+}
+
+.instructions {
+    @include li-styles(
+        map.get($palette, brown800),
+        0.8em,
+        map.get($font-weights, medium),
+        map.get($palette, stone600),
+        map.get($palette, stone900)
+    );
+}
+
+.line {
+    width: 100%;
+}
+
+.nutrition {
+    width: 100%;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        .last-line {
+            border-bottom: 0px;
+        }
+    }
+    tr {
+        border-bottom: 1px solid map.get($palette, stone150);
+        .value {
+            color: map.get($palette, brown800);
+        }
+    }
+    th {
+        padding: 10px;
+        padding-left: 30px;
+        text-align: left;
+        font-weight: map.get($font-weights, small);
+    }
+}
