@@ -84,6 +84,9 @@ main {
     }
 }
 
+.description {
+    margin-bottom: 15px;
+}
 .preparation-time {
     background-color: map.get($palette, rose50);
     width: auto;

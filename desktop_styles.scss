@@ -79,6 +79,9 @@ main {
         font-family: "young-serif";
     }
 }
+.description{
+    margin-bottom: 13px;
+}
 
 .preparation-time {
     background-color: map.get($palette, rose50);

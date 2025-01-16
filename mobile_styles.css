@@ -46,6 +46,10 @@ main h1 {
   font-family: "young-serif";
 }
 
+.description {
+  margin-bottom: 15px;
+}
+
 .preparation-time {
   background-color: hsl(330, 100%, 98%);
   width: auto;
